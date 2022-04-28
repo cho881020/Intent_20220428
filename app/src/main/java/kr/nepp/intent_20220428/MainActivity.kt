@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val testVar = "테스트문구"
+
         btnMove.setOnClickListener {
 
             val myIntent = Intent( this, OtherActivity::class.java )
