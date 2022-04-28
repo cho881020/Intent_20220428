@@ -10,7 +10,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val testVar = "테스트문구"
+        btnSend.setOnClickListener {
+
+            val inputMessage = edtMessage.text.toString()
+
+            val testNum = 10
+
+            val myIntent = Intent(this, MessageActivity::class.java)
+
+//            myIntent변수에, 들고 갈 데이터 첨부.
+            myIntent.putExtra("메세지", inputMessage)
+            myIntent.putExtra("정수", testNum)
+
+            startActivity(myIntent)
+
+        }
 
         btnMove.setOnClickListener {
 
